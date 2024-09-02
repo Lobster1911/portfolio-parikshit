@@ -35,6 +35,19 @@ header p {
     margin: 0;
 }
 
+/* About Section */
+#about {
+    text-align: center;
+    padding: 2em;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
 /* Sections */
 section {
     padding: 2em;
