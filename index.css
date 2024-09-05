@@ -17,8 +17,6 @@ a:hover {
     text-decoration: underline;
 }
 
-
-
 /* Navigation bar styling */
 .navbar {
     display: flex;
@@ -32,15 +30,14 @@ a:hover {
 .navbar h1 {
     font-size: 24px;
     color: #af60ff;
-    margin-top: -10px; /* Move the h1 up by 10px */
-    margin-bottom: 0; /* Ensure no extra space below the h1 */
+    margin-top: -10px;
+    margin-bottom: 0;
 }
 
-/* Style for navigation links */
 .navbar nav ul {
     display: flex;
     gap: 20px;
-    list-style: none; /* Remove bullets */
+    list-style: none;
 }
 
 .navbar nav ul li a {
@@ -62,32 +59,39 @@ a:hover {
     margin-bottom: 0;
 }
 
-
-
-
 /* Media Queries for responsive design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack header vertically */
+        flex-direction: column;
         align-items: flex-start;
+    }
+
+    .navbar h1 {
+        font-size: 20px; /* Adjust font size for mobile */
+        text-align: left;
+        margin-bottom: 10px;
     }
 
     .navbar nav ul {
         flex-direction: column;
-        width: 100%; /* Take up full width on mobile */
-        gap: 10px; /* Reduce gap for mobile */
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .navbar nav ul li {
+        margin-bottom: 10px;
     }
 
     .navbar nav ul li a {
-        font-size: 16px; /* Reduce font size for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
     }
 
     .subtitle {
-        font-size: 16px; /* Adjust subtitle size for mobile */
-        text-align: left;
+        font-size: 16px;
         margin-left: 0;
     }
 }
+
 
 
 
