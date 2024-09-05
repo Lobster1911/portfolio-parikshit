@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parikshit Padole | Portfolio</title>
+    <title>Parikshit Padole - Robotics and AI</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>Parikshit Padole</h1>
-        <p>AI and Robotics</p>
+        <div class="navbar">
+            <h1>Parikshit Padole</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="https://blogs.imperial.ac.uk/parikshit/">Blogs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="subtitle">Robotics and AI</p>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>About</h2>
         <img src="images\IMG_20240824_221302_916.jpg" alt="Profile Image of Parikshit Padole" class="profile-image">
         <p>
             Parikshit is a student and inventor in the fields of Artificial Intelligence (AI) and Space Technology.
@@ -25,22 +35,23 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Satellite Tracking and Trajectory Prediction Application</h3>
+            <h3><a href="/Project 1/project1.html">Satellite Tracking and Trajectory Prediction Application</a></h3>
             <p>Developed an innovative web application to enhance Space Situational Awareness (SSA) by providing real-time 
                satellite tracking and trajectory prediction for Earth’s orbit. The application leverages open-source Two-Line Element (TLE) data 
                and integrates both traditional mathematical models and an experimental Long Short-Term Memory (LSTM) machine learning model 
-               for precise satellite trajectory prediction</p>
+               for precise satellite trajectory prediction.</p>
         </div>
+        
         <div class="project">
-            <h3>Earth Rock Classifier</h3>
-            <p>Developed a RaspberryPi 4B based ML model that identifies 35 diffrent types of rocks, this project was 
-               developed to understand and learn about image processing and learn how to integrate Machine Learning in Embedded system.</p>
+            <h3><a href="project2.html">Earth Rock Classifier</a></h3>
+            <p>Developed a RaspberryPi 4B based ML model that identifies 35 different types of rocks. This project was 
+               developed to understand and learn about image processing and learn how to integrate Machine Learning in Embedded systems.</p>
         </div>
-        <!-- Add more projects as needed -->
     </section>
+    
 
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
         <p>If you would like to collaborate or just want to say hi, feel free to contact me!</p>
         <ul>
             <li>Email: parikshitpadole@gmail.com</li>

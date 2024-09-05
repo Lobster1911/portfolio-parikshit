@@ -17,23 +17,55 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header */
-header {
-    background-color: #1f1f1f;
-    color: #bb86fc;
-    text-align: center;
-    padding: 2em 0;
+
+
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
+.navbar h1 {
+    font-size: 24px;
+    color: #af60ff;
+    margin-top: -10px; /* Move the h1 up by 10px */
+    margin-bottom: 0; /* Ensure no extra space below the h1 */
 }
 
-header p {
-    font-size: 1.2em;
-    margin: 0;
+
+.navbar nav ul {
+    display: flex;
+    gap: 20px;
 }
+
+.navbar nav ul li a {
+    color: #af60ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #af60ff;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: -35px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
 
 /* About Section */
 #about {
@@ -62,18 +94,30 @@ section h2 {
     margin-bottom: 1em;
 }
 
+
+
+
 /* Projects */
 .project {
     background-color: #1f1f1f;
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
+}
+
+/* Hover effect for projects */
+.project:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
 }
 
 .project h3 {
     color: #bb86fc;
     margin-top: 0;
 }
+
+
 
 /* Contact */
 ul {
@@ -83,6 +127,15 @@ ul {
 
 ul li {
     margin-bottom: 0.5em;
+}
+
+ul li a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
