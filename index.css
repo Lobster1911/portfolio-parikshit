@@ -19,7 +19,6 @@ a:hover {
 
 
 
-
 /* Navigation bar styling */
 .navbar {
     display: flex;
@@ -27,6 +26,7 @@ a:hover {
     align-items: center;
     padding: 20px;
     background-color: #1e1e1e;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .navbar h1 {
@@ -36,7 +36,7 @@ a:hover {
     margin-bottom: 0; /* Ensure no extra space below the h1 */
 }
 
-
+/* Style for navigation links */
 .navbar nav ul {
     display: flex;
     gap: 20px;
@@ -65,6 +65,29 @@ a:hover {
 
 
 
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack header vertically */
+        align-items: flex-start;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%; /* Take up full width on mobile */
+        gap: 10px; /* Reduce gap for mobile */
+    }
+
+    .navbar nav ul li a {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+
+    .subtitle {
+        font-size: 16px; /* Adjust subtitle size for mobile */
+        text-align: left;
+        margin-left: 0;
+    }
+}
 
 
 
@@ -95,9 +118,6 @@ section h2 {
     margin-bottom: 1em;
 }
 
-
-
-
 /* Projects */
 .project {
     background-color: #1f1f1f;
@@ -107,7 +127,6 @@ section h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
 }
 
-/* Hover effect for projects */
 .project:hover {
     transform: scale(1.05); /* Slightly increase the size */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
@@ -138,7 +157,6 @@ ul li a {
 ul li a:hover {
     text-decoration: underline;
 }
-
 
 
 
