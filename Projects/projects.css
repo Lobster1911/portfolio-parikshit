@@ -2,7 +2,7 @@
 body {
     background-color: #121212;
     color: #e0e0e0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -13,6 +13,9 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #ffcc80;
+}
 
 /* Navigation bar styling */
 .navbar {
@@ -20,16 +23,15 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    /* background-color: #1e1e1e; */
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .navbar h1 {
-    font-size: 24px;
-    color: #af60ff;
-    margin-top: -10px;
-    margin-bottom: 0;
+    font-size: 28px;
+    color: #00ccff; /* Electric Blue */
+    margin: 0;
 }
+
 
 .navbar nav ul {
     display: flex;
@@ -38,22 +40,21 @@ a {
 }
 
 .navbar nav ul li a {
-    color: #af60ff;
-    text-decoration: none;
+    color: #00ccff;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-    text-decoration: underline;
+    color: #ffcc80;
 }
 
 .subtitle {
-    font-size: 18px;
-    color: #af60ff;
+    font-size: 20px;
+    color: #00ccff;
     text-align: left;
-    margin-left: 20px;
     margin-top: -35px;
-    margin-bottom: 0;
+    margin-left: 20px;
 }
 
 /* Media Queries for responsive design */
@@ -64,8 +65,7 @@ a {
     }
 
     .navbar h1 {
-        font-size: 20px; /* Adjust font size for mobile */
-        text-align: left;
+        font-size: 24px;
         margin-bottom: 10px;
     }
 
@@ -80,7 +80,7 @@ a {
     }
 
     .navbar nav ul li a {
-        font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 16px;
     }
 
     .subtitle {

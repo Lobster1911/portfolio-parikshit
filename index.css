@@ -11,7 +11,6 @@ body {
 a {
     color: #bb86fc;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 a:hover {
@@ -24,6 +23,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .navbar h1 {
