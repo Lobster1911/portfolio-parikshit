@@ -19,12 +19,14 @@ a:hover {
 
 /* Navigation bar styling */
 .navbar {
+    background-color: transparent; /* This ensures there is no background color */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
+
 
 .navbar h1 {
     font-size: 28px;
