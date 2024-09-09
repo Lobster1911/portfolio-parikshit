@@ -13,9 +13,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
 /* Navigation bar styling */
 .navbar {
@@ -23,7 +20,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
@@ -98,16 +95,45 @@ a:hover {
     margin-top: 80px; /* Adjust the value to increase or decrease the space */
 }
 
+
 .projectlist {
     background-color: #1f1f1f;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for the project boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 800px; /* Ensures that it doesn't get too wide */
-    margin: 20px auto; /* Centers the project boxes */
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
+
+.projectlist:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 
 /* Hover effect for projects */
 .projectlist:hover {
@@ -115,10 +141,48 @@ a:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
 }
 
+/* Project badges */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap; /* Ensures tags will wrap to the next line */
+    gap: 10px; /* Adds spacing between the tags */
+    margin-top: 10px;
+}
+
+.tech-badges span {
+    background-color: #333;
+    color: #fff;
+    padding: 3px 8px; /* Reduce padding for smaller tags */
+    border-radius: 5px;
+    font-size: 0.85em; /* Slightly reduce font size */
+    margin-bottom: 5px; /* Add a small margin for wrapping */
+}
+
+
 .projectlist h3 {
     color: #bb86fc;
     margin-top: 0;
 }
+
+
+/* Learn More button */
+.learn-more-btn {
+    color: white;
+    background-color: #121212;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #333;
+}
+
+
+
 
 /* Project Details Section */
 #project-details {
@@ -145,6 +209,9 @@ a:hover {
 #project-details ul li {
     list-style-type: disc;
 }
+
+
+
 
 /* Media Queries for project sections */
 @media (max-width: 768px) {
