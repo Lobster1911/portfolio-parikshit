@@ -104,6 +104,26 @@ a:hover {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Typing effect styles */
+#typing-effect {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 18px;
+    color: #e0e0e0;
+    white-space: pre-wrap; /* To preserve line breaks */
+    overflow: hidden; /* Ensures no unwanted scrollbars */
+    border-right: 3px solid #bb86fc; /* Cursor effect */
+    width: fit-content; /* So the text container adjusts dynamically */
+    animation: blink-cursor 0.75s step-end infinite; /* Blinking cursor effect */
+}
+
+/* Cursor blink animation */
+@keyframes blink-cursor {
+    from { border-right-color: #bb86fc; }
+    to { border-right-color: transparent; }
+}
+
+
+
 .profile-image {
     width: 180px;
     height: 180px;
