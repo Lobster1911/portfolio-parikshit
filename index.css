@@ -183,25 +183,81 @@ section h2 {
     margin-top: 0;
 }
 
+
+/* Styling for the View More container */
+.view-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for the View More link */
+.view-more-link {
+    font-size: 1.2rem;  /* Adjust the size of the text */
+    color: #af60ff;        /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;  /* Make the text bold */
+    padding: 10px 20px; /* Add some padding */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the link */
+.view-more-link:hover {
+    background-color: #000; /* Background changes on hover */
+    color: #ffcc80;            /* Text color changes on hover */
+    cursor: pointer;        /* Change cursor to pointer */
+}
+
+
+
+
+
 /* Contact Section */
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Contact Section Styling */
+#contact {
+    text-align: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2em;
 }
 
-ul li {
-    margin-bottom: 0.8em;
-}
-
-ul li a {
+#contact h2 {
+    font-size: 32px;
     color: #bb86fc;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    margin-bottom: 1em;
 }
 
-ul li a:hover {
+#contact p {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-bottom: 1.5em;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+.contact-info ul li {
+    margin-bottom: 1em;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #bb86fc;
+}
+
+.contact-info ul li a {
+    color: #00ccff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info ul li a:hover {
     color: #ffcc80;
 }
+
 
 /* Footer */
 footer {
