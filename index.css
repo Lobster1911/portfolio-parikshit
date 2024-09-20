@@ -17,23 +17,62 @@ a:hover {
     color: #ffcc80;
 }
 
+/* Hide the menu items by default */
+#menu-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Hide menu on smaller screens */
+@media (max-width: 768px) {
+    #menu-items {
+        display: none; /* Hide the menu items by default on smaller screens */
+        flex-direction: column;
+        background-color: #121212;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        width: 200px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+    }
+
+    /* Hamburger menu icon for smaller screens */
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+        font-size: 28px;
+        cursor: pointer;
+        color: #00ccff;
+        transition: color 0.3s ease;
+    }
+
+    .hamburger:hover {
+        color: #ffcc80;
+    }
+
+    /* Show the menu when 'show' class is added */
+    #menu-items.show {
+        display: flex; /* Show the menu when toggled */
+    }
+}
+
 /* Navigation bar styling */
 .navbar {
-    background-color: transparent; /* This ensures there is no background color */
+    background-color: transparent; /* No background color */
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    flex-wrap: wrap;
 }
-
 
 .navbar h1 {
     font-size: 28px;
     color: #00ccff; /* Electric Blue */
     margin: 0;
 }
-
 
 .navbar nav ul {
     display: flex;
@@ -50,6 +89,34 @@ a:hover {
 .navbar nav ul li a:hover {
     color: #ffcc80;
 }
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .navbar nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 16px;
+    }
+}
+
 
 .subtitle {
     font-size: 20px;

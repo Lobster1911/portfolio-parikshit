@@ -12,39 +12,59 @@
             <h1>Parikshit Padole</h1>
             <nav>
                 <ul>
-                    <li><a href="../index.html">About</a></li> <!-- Moves up one level to find index.html -->
-                    <li><a href="projectlist.html">Projects</a></li> <!-- Link for the current project file -->
-                    <li><a href="https://blogs.imperial.ac.uk/parikshit/">Blogs</a></li> <!-- External link remains unchanged -->
-                    <li><a href="../index.html#contact">Contact</a></li> <!-- Same as above -->
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="projectlist.html">Projects</a></li>
+                    <li><a href="https://blogs.imperial.ac.uk/parikshit/">Blogs</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
                 </ul>                
             </nav>
         </div>
         <p class="subtitle">Robotics and AI</p>
     </header>
 
-
     <section id="project-details">
         <h2>Satellite Tracking and Trajectory Prediction Application</h2>
-        <p>This project aims to enhance Space Situational Awareness (SSA) by providing real-time satellite tracking and trajectory prediction.</p>
-        <p>The application leverages open-source Two-Line Element (TLE) data and integrates traditional mathematical models along with 
-        an experimental Long Short-Term Memory (LSTM) machine learning model for precise satellite trajectory prediction.</p>
+        <p>This project enhances Space Situational Awareness (SSA) by providing real-time satellite tracking and trajectory prediction for Earth’s orbit.</p>
+        <p>The application integrates open-source Two-Line Element (TLE) data with both traditional mathematical models and an experimental Long Short-Term Memory (LSTM) machine learning model for precise satellite trajectory prediction. Additionally, it includes a rocket launch simulation tool to predict trajectories based on input parameters.</p>
 
-        <h3>Features:</h3>
-        <ul>
-            <li>Real-time satellite tracking.</li>
-            <li>Prediction of satellite trajectory using machine learning.</li>
-            <li>Utilization of TLE data for calculations.</li>
-        </ul>
+        <h3>Key Features:</h3>
+        <div class="feature-cards">
+            <div class="card">
+                <p>Real-time satellite tracking across all Earth orbits.</p>
+            </div>
+            <div class="card">
+                <p>Prediction of satellite trajectories using traditional models and LSTM machine learning.</p>
+            </div>
+            <div class="card">
+                <p>Rocket launch simulation based on input parameters like thrust and weather conditions.</p>
+            </div>
+            <div class="card">
+                <p>3D satellite visualization using Three.js.</p>
+            </div>
+            <div class="card">
+                <p>Integration of TLE data for satellite tracking.</p>
+            </div>
+        </div>
 
         <h3>Technologies Used:</h3>
-        <ul>
-            <li>Python</li>
-            <li>Machine Learning (LSTM Model)</li>
-            <li>JavaScript for visualization</li>
-            <li>Web frameworks for front-end</li>
+        <div class="tech-cards">
+            <div class="card">
+                <p>Frontend: React.js, Three.js, React-Three-Fiber, React-Bootstrap.</p>
+            </div>
+            <div class="card">
+                <p>Backend: Python Flask, TensorFlow (LSTM Model), Satellite.js for TLE data.</p>
+            </div>
+            <div class="card">
+                <p>APIs: CelesTrak (satellite data), OpenWeatherMap (weather data for launch simulation).</p>
+            </div>
+        </div>
+
+        <h3>Links:</h3>
+        <ul class="no-bullets">
+            <li><a href="https://github.com/Lobster1911/Earth-Eye" target="_blank" class="link-text">GitHub Repository</a></li>
+            <li><a href="https://www.researchgate.net/publication/384154187_Satellite_Tracking_and_Trajectory_Prediction" target="_blank" class="link-text">Research Project Report</a></li>
         </ul>
 
-        <p><a href="projectlist.html">Back to Projects</a></p> <!-- Add navigation back to the main projects page -->
     </section>
 
     <footer>

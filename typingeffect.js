@@ -16,3 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typeWriter(); // Initiate typing effect when the page loads
 });
+
+
+
+// menuToggle.js
+const hamburger = document.getElementById('hamburger-menu');
+const menuItems = document.getElementById('menu-items');
+
+hamburger.addEventListener('click', () => {
+    menuItems.classList.toggle('show');
+});
