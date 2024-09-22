@@ -287,7 +287,7 @@ section h2 {
 
 #contact h2 {
     font-size: 32px;
-    color: #bb86fc;
+    color: linear-gradient(to right, #af60ff, #ffcc80)c;
     margin-bottom: 1em;
 }
 
