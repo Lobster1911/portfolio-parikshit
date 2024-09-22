@@ -24,43 +24,17 @@ a:hover {
     list-style: none;
 }
 
-/* Hide menu on smaller screens */
-@media (max-width: 768px) {
-    #menu-items {
-        display: none; /* Hide the menu items by default on smaller screens */
-        flex-direction: column;
-        background-color: #121212;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 10px;
-        width: 200px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-    }
-
-    /* Hamburger menu icon for smaller screens */
-    .hamburger {
-        display: block; /* Show the hamburger icon */
-        font-size: 28px;
-        cursor: pointer;
-        color: #00ccff;
-        transition: color 0.3s ease;
-    }
-
-    .hamburger:hover {
-        color: #ffcc80;
-    }
-
-    /* Show the menu when 'show' class is added */
-    #menu-items.show {
-        display: flex; /* Show the menu when toggled */
-    }
+/* Hamburger menu icon styling */
+#mobile-menu {
+    display: none; /* Hidden by default */
+    font-size: 28px;
+    cursor: pointer;
+    color: #00ccff;
 }
 
-/* Navigation bar styling */
+/* Navbar styling */
 .navbar {
-    background-color: transparent; /* No background color */
+    background-color: transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -90,34 +64,7 @@ a:hover {
     color: #ffcc80;
 }
 
-/* Media Queries for responsive design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .navbar nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navbar nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .navbar nav ul li a {
-        font-size: 16px;
-    }
-}
-
-
+/* Subtitle below the name */
 .subtitle {
     font-size: 20px;
     color: #00ccff;
@@ -126,11 +73,76 @@ a:hover {
     margin-left: 20px;
 }
 
+/* Hamburger menu icon styling */
+#mobile-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00ccff;
+    margin-left: auto;
+}
+
+
+
 /* Media Queries for responsive design */
 @media (max-width: 768px) {
-    .navbar {
+    /* Show the hamburger menu */
+    #mobile-menu {
+        display: block;
+    }
+
+    /* Hide the menu items by default */
+    .navbar nav ul {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
+        position: absolute;
+        top: 60px; /* Adjust for space below the header */
+        right: 0; /* Align it to the right edge of the screen */
+        left: 0; /* Make it fit the screen width */
+        margin: 0 auto; /* Center the dropdown */
+        background-color: #1f1f1f; /* Slightly lighter black */
+        width: 90%; /* Take up most of the screen width without overflow */
+        max-width: 400px; /* Ensure the dropdown has a maximum width */
+        padding: 10px 0; /* Padding inside the menu */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Box shadow for depth */
+        border-radius: 10px; /* Smooth rounded corners */
+        text-align: center;
+        z-index: 100; /* Ensure it stays on top */
+    }
+
+    /* Menu items */
+    .navbar nav ul li {
+        margin-bottom: 10px; /* Space between items */
+        list-style: none;
+    }
+
+    /* Show the menu when active */
+    .navbar.active nav ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Slide down when activated */
+    }
+
+    /* Style for the menu links */
+    .navbar nav ul li a {
+        color: #00ccff;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Each menu link */
+    .navbar nav ul li {
+        margin-bottom: 15px; /* Space between the menu items */
+        list-style: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
     }
 
     .navbar h1 {
@@ -142,6 +154,7 @@ a:hover {
         flex-direction: column;
         width: 100%;
         padding-left: 0;
+        align-items: center;
     }
 
     .navbar nav ul li {
@@ -151,22 +164,20 @@ a:hover {
     .navbar nav ul li a {
         font-size: 16px;
     }
-
-    .subtitle {
-        font-size: 16px;
-        margin-left: 0;
-    }
 }
 
 
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 16px;
+    }
+}
 
 /* About Section */
 #about {
     text-align: center;
     padding: 2.5em;
-
     border-radius: 10px;
-
     margin-bottom: 2em;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -176,20 +187,17 @@ a:hover {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 18px;
     color: #e0e0e0;
-    white-space: pre-wrap; /* To preserve line breaks */
-    overflow: hidden; /* Ensures no unwanted scrollbars */
-    border-right: 3px solid #bb86fc; /* Cursor effect */
-    width: fit-content; /* So the text container adjusts dynamically */
-    animation: blink-cursor 0.75s step-end infinite; /* Blinking cursor effect */
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 3px solid #bb86fc;
+    width: fit-content;
+    animation: blink-cursor 0.75s step-end infinite;
 }
 
-/* Cursor blink animation */
 @keyframes blink-cursor {
     from { border-right-color: #bb86fc; }
     to { border-right-color: transparent; }
 }
-
-
 
 .profile-image {
     width: 180px;
@@ -250,39 +258,29 @@ section h2 {
     margin-top: 0;
 }
 
-
-/* Styling for the View More container */
 .view-more-container {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Styling for the View More link */
 .view-more-link {
-    font-size: 1.2rem;  /* Adjust the size of the text */
-    color: #af60ff;        /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold;  /* Make the text bold */
-    padding: 10px 20px; /* Add some padding */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 1.2rem;
+    color: #af60ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for the link */
 .view-more-link:hover {
-    background-color: #000; /* Background changes on hover */
-    color: #ffcc80;            /* Text color changes on hover */
-    cursor: pointer;        /* Change cursor to pointer */
+    background-color: #000;
+    color: #ffcc80;
+    cursor: pointer;
 }
-
-
-
-
 
 /* Contact Section */
-/* Contact Section Styling */
 #contact {
     text-align: center;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 2em;
 }
@@ -324,7 +322,6 @@ section h2 {
 .contact-info ul li a:hover {
     color: #ffcc80;
 }
-
 
 /* Footer */
 footer {

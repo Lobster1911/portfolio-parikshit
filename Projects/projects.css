@@ -17,6 +17,23 @@ a:hover {
     color: #ffcc80;
 }
 
+
+/* Hide the menu items by default */
+#menu-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#mobile-menu {
+    display: none; /* Hidden by default */
+    font-size: 28px;
+    cursor: pointer;
+    color: #00ccff;
+    margin-left: auto;
+}
+
+
 /* Remove bullet points */
 ul.no-bullets {
     list-style-type: none;
@@ -27,68 +44,24 @@ ul.no-bullets li {
     margin-bottom: 10px;
 }
 
-/* Hide the menu items by default on smaller screens */
-#menu-items {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
 
-/* Hamburger icon styling */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #00ccff;
-    transition: color 0.3s ease;
-}
 
-.hamburger:hover {
-    color: #ffcc80;
-}
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    #menu-items {
-        display: none; /* Hide menu items by default on small screens */
-        flex-direction: column;
-        background-color: #121212;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 10px;
-        width: 200px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger icon */
-    }
-
-    /* When "show" class is added, show the menu */
-    #menu-items.show {
-        display: flex;
-    }
-}
-
-/* Navigation bar styling */
+/* Navbar styling */
 .navbar {
-    background-color: transparent; /* This ensures there is no background color */
+    background-color: transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    flex-wrap: wrap;
 }
-
 
 .navbar h1 {
     font-size: 28px;
     color: #00ccff; /* Electric Blue */
     margin: 0;
 }
-
 
 .navbar nav ul {
     display: flex;
@@ -106,6 +79,7 @@ ul.no-bullets li {
     color: #ffcc80;
 }
 
+/* Subtitle below the name */
 .subtitle {
     font-size: 20px;
     color: #00ccff;
@@ -114,11 +88,78 @@ ul.no-bullets li {
     margin-left: 20px;
 }
 
+/* Hamburger menu icon styling */
+#mobile-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00ccff;
+    margin-left: auto;
+}
+
+
+
+
 /* Media Queries for responsive design */
 @media (max-width: 768px) {
-    .navbar {
+    /* Show the hamburger menu */
+    #mobile-menu {
+        display: block;
+    }
+
+    /* Hide the menu items by default */
+    .navbar nav ul {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
+        position: absolute;
+        top: 60px; /* Adjust for space below the header */
+        right: 0; /* Align it to the right edge of the screen */
+        left: 0; /* Make it fit the screen width */
+        margin: 0 auto; /* Center the dropdown */
+        background-color: #1f1f1f; /* Slightly lighter black */
+        width: 90%; /* Take up most of the screen width without overflow */
+        max-width: 400px; /* Ensure the dropdown has a maximum width */
+        padding: 10px 0; /* Padding inside the menu */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Box shadow for depth */
+        border-radius: 10px; /* Smooth rounded corners */
+        text-align: center;
+        z-index: 100; /* Ensure it stays on top */
+    }
+
+    /* Menu items */
+    .navbar nav ul li {
+        margin-bottom: 10px; /* Space between items */
+        list-style: none;
+    }
+
+    /* Show the menu when active */
+    .navbar.active nav ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0); /* Slide down when activated */
+    }
+    
+
+    /* Style for the menu links */
+    .navbar nav ul li a {
+        color: #00ccff;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Each menu link */
+    .navbar nav ul li {
+        margin-bottom: 15px; /* Space between the menu items */
+        list-style: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
     }
 
     .navbar h1 {
@@ -130,6 +171,7 @@ ul.no-bullets li {
         flex-direction: column;
         width: 100%;
         padding-left: 0;
+        align-items: center;
     }
 
     .navbar nav ul li {
@@ -139,12 +181,18 @@ ul.no-bullets li {
     .navbar nav ul li a {
         font-size: 16px;
     }
+}
 
+
+@media (max-width: 768px) {
     .subtitle {
         font-size: 16px;
-        margin-left: 0;
     }
 }
+
+
+
+
 
 
 /* Project List Styling */
