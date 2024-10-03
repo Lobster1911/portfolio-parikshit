@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
+
+    <div id="particles-js"></div> 
+
     <header>
         <div class="navbar">
             <h1><a href="../index.html">Parikshit Padole</a></h1>
@@ -26,6 +29,7 @@
         </div>
         <p class="subtitle">Robotics and AI</p>
     </header>
+    
 
     <section id="projectlist">
 
@@ -146,14 +150,68 @@
             
             <a href="project3.html" class="learn-more-btn">Learn More</a>
         </div>
-
-
-
     </section>
 
     <footer>
         <p>&copy; 2024 Parikshit Padole. All Rights Reserved.</p>
     </footer>
     <script src="../menu.js"> </script>
+
+    <!-- Particle.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Particle.js Configuration -->
+    <script>
+        particlesJS("particles-js", {
+          "particles": {
+            "number": {
+              "value": 100, 
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#00ccff"
+            },
+            "shape": {
+              "type": "circle"
+            },
+            "opacity": {
+              "value": 0.5
+            },
+            "size": {
+              "value": 3,
+              "random": true
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#00ccff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 6,
+              "direction": "none"
+            }
+          },
+          "interactivity": {
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              }
+            }
+          },
+          "retina_detect": true
+        });
+        </script>
+
 </body>
 </html>
