@@ -11,13 +11,16 @@
 
     <header>
         <div class="navbar">
-            <h1><a href="../index.html">Parikshit Padole</a></h1>
-            <!-- Hamburger Menu Icon -->
-            <div id="mobile-menu">
-                <i class="fas fa-bars"></i> <!-- Font Awesome icon -->
-            </div>
+            <h1>Parikshit Padole</h1>
+            <!-- Smaller Hamburger Menu Button -->
+            <button class="button-three" id="mobile-menu" aria-controls="primary-navigation" aria-expanded="false">
+                <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="40" height="40">
+                    <path class="line" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" 
+                          d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"></path>
+                </svg>
+            </button>
             <nav>
-                <ul>
+                <ul id="menu-items">
                     <li><a href="../index.html">About</a></li>
                     <li><a href="projectlist.html">Projects</a></li>
                     <li><a href="https://blogs.imperial.ac.uk/parikshit/">Blogs</a></li>
@@ -27,6 +30,7 @@
         </div>
         <p class="subtitle">Robotics and AI</p>
     </header>
+    
 
     <section id="project-details">
         <h2>Note Taking Application</h2>

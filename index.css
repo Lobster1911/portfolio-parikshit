@@ -22,20 +22,75 @@ a:hover {
     color: #ffcc80;
 }
 
-/* Hide the menu items by default */
-#menu-items {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+
+
+.button-three {
+    --button-color: #00ccff; /* Adjust the button color */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    overflow: hidden;
 }
 
-/* Hamburger menu icon styling */
-#mobile-menu {
-    display: none; /* Hidden by default */
-    font-size: 28px;
-    cursor: pointer;
-    color: #00ccff;
+.button-three .hamburger {
+    transition: translate 0.5s ease, rotate 0.5s ease;
 }
+
+.button-three[aria-expanded="true"] .hamburger {
+    translate: 5px -5px;
+    rotate: 0.125turn;
+}
+
+.button-three .line {
+    transition: 0.5s ease;
+    stroke-dasharray: 60 31 60 300;
+}
+
+.button-three[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+}
+
+
+
+@keyframes to-close-icon {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 79.9;
+    }
+    60% {
+        stroke-dashoffset: 79.9;
+        rotate: calc(var(--rotation));
+    }
+    100% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+    }
+}
+
+@keyframes to-open-icon {
+    0% {
+        stroke-dashoffset: 0;
+        rotate: var(--rotation);
+    }
+    40% {
+        stroke-dashoffset: 79.9;
+        rotate: var(--rotation);
+    }
+    60% {
+        stroke-dashoffset: 79.9;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
 
 /* Navbar styling */
 .navbar {
@@ -78,6 +133,8 @@ a:hover {
     margin-left: 20px;
 }
 
+
+
 /* Hamburger menu icon styling */
 #mobile-menu {
     display: none;
@@ -86,8 +143,6 @@ a:hover {
     color: #00ccff;
     margin-left: auto;
 }
-
-
 
 
 
