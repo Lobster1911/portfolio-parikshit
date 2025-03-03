@@ -1,5 +1,3 @@
-Welcome to the GitHub repository for [Parikshit Padole's Portfolio](https://lobster1911.github.io/portfolio-parikshit/) — a showcase of my projects, skills, and professional journey in the fields of Robotics, Artificial Intelligence (AI), and Space Technology.
-
 ## 🌐 Live Demo
 
 Explore the live portfolio at: [https://lobster1911.github.io/portfolio-parikshit/](https://lobster1911.github.io/portfolio-parikshit/)
