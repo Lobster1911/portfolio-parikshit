@@ -323,6 +323,12 @@ section h2 {
     margin-top: 0;
 }
 
+.project-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
 
 
 /* View More */
