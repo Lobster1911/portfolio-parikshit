@@ -1,12 +1,12 @@
-## 🌐 Live Demo
+## Live Demo
 
 Explore the live portfolio at: [https://lobster1911.github.io/portfolio-parikshit/](https://lobster1911.github.io/portfolio-parikshit/)
 
-## 📋 About
+## About
 
 This portfolio website serves as an online resume, providing an overview of my background in Robotics and AI. It highlights my key projects, skills, and experience. The website is built with responsiveness in mind, ensuring it looks great on both desktop and mobile devices.
 
-## 🛠️ Features
+## Features
 
 - **Responsive Design:** Optimized for both desktop and mobile viewing.
 - **Project Showcase:** Detailed descriptions of selected projects with links for more information.
@@ -14,14 +14,14 @@ This portfolio website serves as an online resume, providing an overview of my b
 - **Animated Hamburger Menu:** Interactive navigation for mobile users.
 - **Typing Effect:** A dynamic, introductory typing effect in the "About" section.
 
-## 🚀 Technologies Used
+## Technologies Used
 
 - **HTML5** and **CSS3**: Structure and styling of the website.
 - **JavaScript**: Interactive elements and animations.
 - **Font Awesome**: Icons for navigation and social media links.
 - **GitHub Pages**: Hosting the live version of the portfolio.
 
-## 📂 Sections
+## Sections
 
 1. **Home**: Brief introduction and tagline.
 2. **About**: A snapshot of my professional background and interests.
